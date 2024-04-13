@@ -9,7 +9,7 @@ public abstract class BaseModel {
         this.id = String.valueOf(UUID.randomUUID());
     }
 
-    public String getId() {
+    public String getID() {
         return id;
     }
 }
