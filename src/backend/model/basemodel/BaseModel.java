@@ -2,7 +2,8 @@ package src.backend.model.basemodel;
 
 import java.util.UUID;
 
-public abstract class BaseModel {
+public abstract class
+BaseModel {
     private final String id;
 
     public BaseModel() {

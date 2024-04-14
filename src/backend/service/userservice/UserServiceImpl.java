@@ -12,6 +12,7 @@ public class UserServiceImpl implements UserService{
     public UserServiceImpl() {
         users = new ArrayList<>();
         users.add(new User("999240051","Turdaliyev","123"));
+		users.add(new User("909017194", "Alimov","qwerty"));
     }
     @Override
     public User login(LoginDTO login) {
