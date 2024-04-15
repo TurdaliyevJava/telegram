@@ -8,12 +8,19 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService{
     private static List<User> users;
+    private User loggedInUser;
 
     public UserServiceImpl() {
         users = new ArrayList<>();
         users.add(new User("999240051","Turdaliyev","123"));
 		users.add(new User("909017194", "Alimov","qwerty"));
     }
+
+    @Override
+    public User getLoggedInUser() {
+        return loggedInUser;
+    }
+
     @Override
     public User login(LoginDTO login) {
         for (User user : users) {

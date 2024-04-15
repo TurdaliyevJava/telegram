@@ -7,6 +7,7 @@ import src.backend.service.baseservice.BaseService;
 import java.util.List;
 
 public interface UserService extends BaseService<User> {
+    User getLoggedInUser();
     User login(LoginDTO login);
     User getUserByUsername(String username);
     void removeUser(String username);

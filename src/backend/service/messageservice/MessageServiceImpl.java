@@ -2,12 +2,19 @@ package src.backend.service.messageservice;
 
 import src.backend.model.message.Message;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MessageServiceImpl implements MessageService{
+    private static List<Message> messages;
+    public MessageServiceImpl() {
+        messages = new ArrayList<>();
+    }
+
     @Override
     public boolean add(Message message) {
-        return false;
+        messages.add(message);
+        return true;
     }
 
     @Override

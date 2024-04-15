@@ -2,12 +2,19 @@ package src.backend.service.chatservice;
 
 import src.backend.model.chat.Chat;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChatServiceImpl implements ChatService{
+    private static List<Chat> chats;
+    public ChatServiceImpl() {
+        chats = new ArrayList<>();
+    }
+
     @Override
     public boolean add(Chat chat) {
-        return false;
+        chats.add(chat);
+        return true;
     }
 
     @Override
@@ -23,5 +30,10 @@ public class ChatServiceImpl implements ChatService{
     @Override
     public List<Chat> getList() {
         return List.of();
+    }
+
+    @Override
+    public List<Chat> getChaTList() {
+        return chats;
     }
 }
